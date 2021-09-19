@@ -9,7 +9,7 @@ namespace Pocker.Hands
 	public class HandBase
 	{
 		private int _initialCardCount;
-		private List<CardBase> _cards = new List<CardBase>(2);
+		private HashSet<CardBase> _cards = new HashSet<CardBase>(2);
 
 		private void CheckIfShuffleInvalid(int initialCount, IEnumerable<CardBase> initialCards)
 		{
@@ -33,7 +33,10 @@ namespace Pocker.Hands
 
 		public void AddCards(IEnumerable<CardBase> cards)
 		{
-			_cards.AddRange(cards);
+			foreach (var card in cards)
+			{
+				_cards.Add(card);
+			}
 		}
 
 		public void AddCard(CardBase card)
