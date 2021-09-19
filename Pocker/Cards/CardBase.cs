@@ -1,8 +1,9 @@
-﻿using Pocker.Infrastructure;
+﻿using System.Collections.Generic;
+using Pocker.Infrastructure;
 
 namespace Pocker.Cards
 {
-	public class CardBase
+	public class CardBase: ValueObject
 	{
 		public CardBase(Rank rank, Suit suit)
 		{
@@ -21,6 +22,18 @@ namespace Pocker.Cards
 			var suitName = DescriptionHelper.Get(Suit);
 
 			return $"{rankName} {suitName}";
+		}
+
+		protected override IEnumerable<object> GetEqualityComponents()
+		{
+			yield return Name;
+			yield return Rank;
+			yield return Suit;
+		}
+
+		public override string ToString()
+		{
+			return Name;
 		}
 	}
 }
