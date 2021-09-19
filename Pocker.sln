@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker", "Pocker.csproj", "{0EDF4307-860A-4637-AD86-87336131208D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker", "Pocker\Pocker.csproj", "{0EDF4307-860A-4637-AD86-87336131208D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker.Test", "..\Pocker.Test\Pocker.Test.csproj", "{90647835-0F7B-4A74-91AA-4A6E4F5471DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker.Test", "Pocker.Test\Pocker.Test.csproj", "{90647835-0F7B-4A74-91AA-4A6E4F5471DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
